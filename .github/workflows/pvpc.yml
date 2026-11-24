@@ -1,0 +1,23 @@
+name: Actualizar precio de la luz (REE)
+on:
+  schedule:
+    - cron: '35 19 * * *'
+    - cron: '35 20 * * *'
+    - cron: '10 23 * * *'
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+  push:
+    paths: ['.github/ree/**', '.github/workflows/pvpc.yml']
+permissions:
+  contents: write
+jobs:
+  pvpc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 .github/ree/pvpc.py
+      - run: |
+          if ! git diff --quiet -- pvpc.json || [ -n "$(git ls-files --others --exclude-standard pvpc.json)" ]; then
+            git config user.name "godinoo14-pixel"; git config user.email "godinoo14-pixel@users.noreply.github.com"
+            git add pvpc.json && git commit -m "Precio de la luz actualizado (REE)" && git pull --rebase -q origin main && git push
+          fi
