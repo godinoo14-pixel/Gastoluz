@@ -18,7 +18,7 @@ const v=id=>parseFloat(String(document.getElementById(id).value).replace(',','.'
 function show(id,h){const r=document.getElementById(id);r.innerHTML=h;r.style.display='block';}
 (function(){let s=null;try{s=localStorage.getItem('ck')}catch(e){}const b=document.getElementById('ck');if(!s)b.style.display='block';
 function set(x){try{localStorage.setItem('ck',x)}catch(e){}b.style.display='none';}
-document.getElementById('cka').onclick=()=>set('1');document.getElementById('ckr').onclick=()=>set('0');})();
+document.getElementById('cka').onclick=()=>{set('1');if(window.loadGA)loadGA();};document.getElementById('ckr').onclick=()=>set('0');if(s==='1'&&window.loadGA)loadGA();})();
 
 
 if(typeof calc==='function'){try{const r=document.getElementById('r');if(r&&r.style.display!=='block')calc();}catch(e){}}

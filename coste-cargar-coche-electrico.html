@@ -24,7 +24,7 @@ const v=id=>parseFloat(String(document.getElementById(id).value).replace(',','.'
 function show(id,h){const r=document.getElementById(id);r.innerHTML=h;r.style.display='block';}
 (function(){let s=null;try{s=localStorage.getItem('ck')}catch(e){}const b=document.getElementById('ck');if(!s)b.style.display='block';
 function set(x){try{localStorage.setItem('ck',x)}catch(e){}b.style.display='none';}
-document.getElementById('cka').onclick=()=>set('1');document.getElementById('ckr').onclick=()=>set('0');})();
+document.getElementById('cka').onclick=()=>{set('1');if(window.loadGA)loadGA();};document.getElementById('ckr').onclick=()=>set('0');if(s==='1'&&window.loadGA)loadGA();})();
 (function(){try{if(localStorage.getItem('nocount'))return;}catch(e){}var d=new Date(),k=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0');var h=function(x){try{fetch('https://abacus.jasoncameron.dev/hit/gastoluz.es/'+x).catch(function(){});}catch(e){}};h('total');h('d-'+k);h('p-coste-cargar-coche-electrico');try{if(localStorage.getItem('ck')==='1'&&localStorage.getItem('uv')!==k){localStorage.setItem('uv',k);h('u-'+k);}}catch(e){}})();
 
 function calc(){const k=v('b')*(v('h')-v('d'))/100*(1+v('pe')/100);
