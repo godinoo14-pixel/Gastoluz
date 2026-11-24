@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Estadísticas | GastoLuz</title><link rel="stylesheet" href="style.css"></head><body>
+<header><div class="w"><a class="logo" href="index.html">Gasto<span>Luz</span></a></div></header><main class="w"><h1>Visitas de GastoLuz</h1>
+<p class="note">Panel privado: no aparece en Google ni está enlazado. Otras webs: <a href="https://cochecuentas.es/estadisticas.html">CocheCuentas</a> · <a href="https://calculadoradias.es/estadisticas.html">CalculadoraDías</a></p>
+<div class="card"><div class="grid" id="sum" style="grid-template-columns:repeat(2,1fr)"></div><div id="bars" style="display:flex;align-items:flex-end;gap:3px;height:140px;margin-top:16px"></div><div id="bl" style="display:flex;justify-content:space-between;font-size:.75rem;color:#6b7185"></div></div>
+<div class="card"><b>Páginas más vistas (desde siempre)</b><table id="pg"></table></div>
+<div class="card"><b>Tus propias visitas</b><p class="note" id="nc"></p><button id="nb" style="width:auto;padding:10px 16px"></button></div>
+<p class="note">Visitas = páginas vistas. Visitantes únicos = navegadores distintos al día que aceptaron cookies, así que suelen ser menos que los reales.</p></main>
+<script>
+const NS='gastoluz.es',P=[["index", "Portada"], ["precio-luz-hoy", "Precio de la luz hoy por horas"], ["consumo-electrodomesticos", "Consumo de electrodomésticos"], ["coste-aire-acondicionado", "Coste del aire acondicionado"], ["potencia-contratada", "¿Qué potencia contratar?"], ["calculadora-kwh", "Calculadora de vatios a kWh"], ["coste-calefaccion-electrica", "Coste de la calefacción eléctrica"], ["ahorro-led", "Ahorro al cambiar a LED"], ["coste-cargar-coche-electrico", "Coste de cargar un coche eléctrico"], ["calculadora-placas-solares", "Calculadora de placas solares"], ["coste-ducha-termo", "Coste de una ducha con termo eléctrico"]];
+const sleep=m=>new Promise(r=>setTimeout(r,m));
+async function g(k){await sleep(380);try{const r=await fetch('https://abacus.jasoncameron.dev/get/'+NS+'/'+k);if(!r.ok)return 0;return (await r.json()).value||0;}catch(e){return 0;}}
+const dk=d=>d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0');
+function box(t,v,s){return '<div class="tool"><p>'+t+'</p><h3 style="font-size:1.6rem;margin:4px 0">'+v.toLocaleString('es-ES')+'</h3><p>'+(s||'')+'</p></div>';}
+function nc(){let on=false;try{on=!!localStorage.getItem('nocount')}catch(e){}document.getElementById('nc').textContent=on?'Tus visitas desde este navegador NO se cuentan.':'Tus visitas desde este navegador SÍ se cuentan.';document.getElementById('nb').textContent=on?'Volver a contarme':'No contar mis visitas en este navegador';}
+document.getElementById('nb').onclick=()=>{try{localStorage.getItem('nocount')?localStorage.removeItem('nocount'):localStorage.setItem('nocount','1')}catch(e){}nc();};nc();
+(async()=>{const days=[];for(let i=13;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);days.push(d);}
+const tot=await g('total');const vis=[],uni=[];
+for(const d of days){vis.push(await g('d-'+dk(d)));}
+const td=vis[13],yd=vis[12],w7=vis.slice(7).reduce((a,b)=>a+b,0);const u0=await g('u-'+dk(days[13]));
+document.getElementById('sum').innerHTML=box('Hoy',td,u0+' visitantes únicos')+box('Ayer',yd,'')+box('Últimos 7 días',w7,'')+box('Total',tot,'desde que se instaló el contador');
+const mx=Math.max(1,...vis);document.getElementById('bars').innerHTML=vis.map((v,i)=>'<div title="'+days[i].toLocaleDateString('es-ES')+': '+v+'" style="flex:1;height:'+Math.max(3,Math.round(v/mx*100))+'%;background:#0b7285;border-radius:3px 3px 0 0"></div>').join('');
+document.getElementById('bl').innerHTML='<span>'+days[0].toLocaleDateString('es-ES',{day:'numeric',month:'short'})+'</span><span>hoy</span>';
+const rows=[];for(const [s,n] of P){rows.push([n,s,await g('p-'+s)]);rows.sort((a,b)=>b[2]-a[2]);document.getElementById('pg').innerHTML='<tr><th>Página</th><th>Visitas</th></tr>'+rows.map(r=>'<tr><td><a href="'+(r[1]=='index'?'./':r[1]+'.html')+'">'+r[0]+'</a></td><td>'+r[2].toLocaleString('es-ES')+'</td></tr>').join('');}
+})();
+</script></body></html>

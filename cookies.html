@@ -7,7 +7,7 @@
 <script type="application/ld+json">[{"@context": "https://schema.org", "@type": "WebPage", "name": "Política de cookies | GastoLuz", "description": "Política de cookies de GastoLuz", "url": "https://gastoluz.es/cookies.html", "inLanguage": "es-ES", "dateModified": "2026-11-24"}, {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "GastoLuz", "item": "https://gastoluz.es/"}, {"@type": "ListItem", "position": 2, "name": "Política de cookies", "item": "https://gastoluz.es/cookies.html"}]}]</script></head><body>
 <header><div class="w"><a class="logo" href="index.html">Gasto<span>Luz</span></a><nav><a href="precio-luz-hoy.html">Precio luz hoy</a><a href="consumo-electrodomesticos.html">Electrodomésticos</a><a href="coste-aire-acondicionado.html">Aire acondicionado</a></nav></div></header>
 <main class="w"><h1>Política de cookies</h1><p>Este sitio usa cookies técnicas (necesarias para recordar tu elección sobre cookies) y, solo si las aceptas, cookies de terceros:</p>
-<table><tr><th>Cookie</th><th>Titular</th><th>Finalidad</th></tr><tr><td>ck (localStorage)</td><td>Propia</td><td>Recordar tu consentimiento</td></tr><tr><td>_ga, _gid</td><td>Google Analytics</td><td>Estadísticas de visitas</td></tr><tr><td>__gads, IDE</td><td>Google AdSense</td><td>Mostrar y medir publicidad</td></tr></table>
+<table><tr><th>Cookie</th><th>Titular</th><th>Finalidad</th></tr><tr><td>ck (localStorage)</td><td>Propia</td><td>Recordar tu consentimiento</td></tr><tr><td>uv (localStorage)</td><td>Propia</td><td>Contar visitantes únicos por día (solo si aceptas)</td></tr><tr><td>_ga, _gid</td><td>Google Analytics</td><td>Estadísticas de visitas</td></tr><tr><td>__gads, IDE</td><td>Google AdSense</td><td>Mostrar y medir publicidad</td></tr></table>
 <p>Puedes retirar el consentimiento o borrar las cookies desde la configuración de tu navegador. Cómo usa Google los datos: policies.google.com/technologies/partner-sites</p>
 <div class="ad"><!-- ADSENSE bloque inferior -->Publicidad</div></main>
 <footer><div class="w"><p>© 2026 GastoLuz · Resultados orientativos; no sustituyen asesoramiento profesional.</p>
@@ -21,6 +21,7 @@ function show(id,h){const r=document.getElementById(id);r.innerHTML=h;r.style.di
 (function(){let s=null;try{s=localStorage.getItem('ck')}catch(e){}const b=document.getElementById('ck');if(!s)b.style.display='block';
 function set(x){try{localStorage.setItem('ck',x)}catch(e){}b.style.display='none';}
 document.getElementById('cka').onclick=()=>set('1');document.getElementById('ckr').onclick=()=>set('0');})();
+(function(){try{if(localStorage.getItem('nocount'))return;}catch(e){}var d=new Date(),k=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0');var h=function(x){try{fetch('https://abacus.jasoncameron.dev/hit/gastoluz.es/'+x).catch(function(){});}catch(e){}};h('total');h('d-'+k);h('p-cookies');try{if(localStorage.getItem('ck')==='1'&&localStorage.getItem('uv')!==k){localStorage.setItem('uv',k);h('u-'+k);}}catch(e){}})();
 
 
 if(typeof calc==='function'){try{const r=document.getElementById('r');if(r&&r.style.display!=='block')calc();}catch(e){}}
