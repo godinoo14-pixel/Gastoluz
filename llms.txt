@@ -1,0 +1,35 @@
+# GastoLuz
+
+> Precio de la luz hoy por horas (PVPC), simulador de tu factura y cuánto gastan tus electrodomésticos, la calefacción o el aire. Calcula y ahorra en tu recibo.
+
+Calculadoras gratuitas en español para España, sin registro. Cada página explica la fórmula, incluye un ejemplo y cita la fuente oficial cuando la hay. Web: https://gastoluz.es/
+
+## Herramientas
+
+- [Precio de la luz hoy por horas (PVPC): horas más baratas](https://gastoluz.es/precio-luz-hoy.html): Precio de la luz hoy y mañana hora a hora en la tarifa PVPC, con las horas más baratas y más caras del día y el mejor momento para poner la lavadora. Datos oficiales de Red Eléctrica.
+- [Calcular factura de la luz: simulador con impuestos 2026](https://gastoluz.es/calcular-factura-luz.html): Calcula tu factura de la luz paso a paso: término de potencia, energía, bono social, impuesto eléctrico, alquiler del contador e IVA. Comprueba si tu recibo está bien.
+- [Consumo de las luces de Navidad: cuánto gastan al día y al mes](https://gastoluz.es/consumo-luces-navidad.html): Calcula cuánto cuestan tus luces de Navidad LED o tradicionales con el precio de la luz de las horas en que las enciendes (PVPC de hoy), por día y en toda la temporada.
+- [Estufa de butano o eléctrica: ¿qué calefacción es más barata?](https://gastoluz.es/estufa-butano-vs-electrica.html): Compara lo que cuesta calentarte con estufa de butano (bombona a 19,55 €), radiador eléctrico o aire acondicionado con bomba de calor, con el precio de la luz de hoy. Coste por hora, mes e invierno.
+- [¿Cuánto gasta una secadora? Coste por ciclo y mejor hora para ponerla](https://gastoluz.es/consumo-secadora.html): Calcula cuánto consume tu secadora por ciclo, al mes y al año: bomba de calor, condensación o evacuación. Con el precio de la luz por horas de hoy para ver a qué hora te sale más barata.
+- [¿Cuánto gasta una manta eléctrica? Coste por hora y al mes](https://gastoluz.es/consumo-manta-electrica.html): Calcula cuánto gasta tu manta eléctrica, calientacamas, almohadilla o brasero por hora, al día y al mes con el precio de la luz por horas de hoy, y cuánto ahorras frente a un radiador o calefactor.
+- [¿Cuánto gasta un deshumidificador? Coste al día y al mes](https://gastoluz.es/consumo-deshumidificador.html): Calcula cuánto gasta tu deshumidificador de compresor o desecante al día y al mes con el precio de la luz por horas de hoy, cuánto cuesta cada litro de agua y si sale más barato que la secadora.
+- [Consumo de electrodomésticos: cuánto gasta cada aparato al mes](https://gastoluz.es/consumo-electrodomesticos.html): Calcula cuánto consume y cuánto cuesta al día, al mes y al año cada electrodoméstico: frigorífico, horno, lavadora, termo, secadora o radiador, según su potencia y las horas de uso.
+- [Consumo de la freidora de aire: cuánto gasta frente al horno](https://gastoluz.es/consumo-freidora-aire.html): Calcula cuánto gasta tu freidora de aire en cada receta y compárala con el horno y el microondas, con el precio de la luz de hoy. Ejemplo con patatas, pollo y bizcocho.
+- [¿Cuánto gasta el aire acondicionado en frío y en calor? Calculadora](https://gastoluz.es/coste-aire-acondicionado.html): Calcula cuánto cuesta el aire acondicionado o la bomba de calor por hora, al día y al mes, en verano y para calentar en invierno, según frigorías, eficiencia y precio de la luz.
+- [Qué potencia de luz contratar: calculadora de kW y ahorro](https://gastoluz.es/potencia-contratada.html): Calcula qué potencia eléctrica necesitas según los aparatos que usas a la vez, si te conviene bajarla o subirla y cuánto ahorras al año en el término de potencia, impuestos incluidos.
+- [Pasar vatios a kWh y euros: calculadora de consumo eléctrico](https://gastoluz.es/calculadora-kwh.html): Convierte vatios (W) a kilovatios hora (kWh) y calcula cuánto te cuesta en euros cualquier aparato según las horas que lo usas. Con ejemplos y la fórmula explicada.
+- [¿Cuánto gasta un radiador eléctrico? Coste de la calefacción](https://gastoluz.es/coste-calefaccion-electrica.html): Calcula cuánto gasta tu radiador de aceite, emisor térmico, calefactor o estufa al día, al mes y en todo el invierno con el precio de la luz de hoy, y cuánto ahorrarías con bomba de calor.
+- [¿Cuánto ahorro con bombillas LED? Calculadora de ahorro al año](https://gastoluz.es/ahorro-led.html): Calcula cuánto ahorras al año cambiando bombillas incandescentes o halógenas por LED, cuántos kWh dejas de gastar y en cuántos meses se amortizan.
+- [Cuánto cuesta cargar un coche eléctrico en casa: por carga y cada 100 km](https://gastoluz.es/coste-cargar-coche-electrico.html): Calcula cuánto cuesta cargar tu coche eléctrico en casa o en la calle: por carga, cada 100 km y al mes, con el precio de la luz por horas de hoy y la franja más barata para enchufarlo.
+- [Calculadora de placas solares: ahorro y amortización](https://gastoluz.es/calculadora-placas-solares.html): Calcula cuántas placas solares necesitas, cuánto ahorrarás al año con autoconsumo y en cuántos años se amortiza la instalación.
+- [¿Cuánto cuesta una ducha con termo eléctrico? Luz y agua](https://gastoluz.es/coste-ducha-termo.html): Calcula cuánto cuesta cada ducha con termo eléctrico en luz y agua y lo que gasta tu familia al mes. En invierno, con el agua más fría, el gasto sube: compruébalo aquí.
+
+## Sobre el sitio
+
+- [Sobre nosotros](https://gastoluz.es/sobre-nosotros.html)
+- [Aviso legal](https://gastoluz.es/aviso-legal.html)
+
+## Otras webs de la misma red
+
+- [CocheCuentas](https://cochecuentas.es/)
+- [CalculadoraDías](https://calculadoradias.es/)
